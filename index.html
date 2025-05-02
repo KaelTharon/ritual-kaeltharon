@@ -1,72 +1,101 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ritual de Kael'Tharon</title>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap');
-
     body {
       margin: 0;
       padding: 0;
-      background: url('https://i.imgur.com/mFZAVvZ.jpeg') no-repeat center center fixed;
+      background: black url('https://images.unsplash.com/photo-1531891437562-4301cf35b7f4?auto=format&fit=crop&w=1920&q=80') no-repeat center center fixed;
       background-size: cover;
-      font-family: 'UnifrakturCook', cursive;
-      color: #f1f1f1;
+      color: white;
+      font-family: 'Cinzel', serif;
       text-align: center;
+      overflow: hidden;
     }
 
-    .overlay {
-      background-color: rgba(0, 0, 0, 0.7);
-      padding: 4rem 2rem;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
+    .container {
+      position: relative;
+      z-index: 2;
+      padding: 10vh 5vw;
     }
 
     h1 {
-      font-size: 3.5rem;
-      margin-bottom: 1rem;
+      font-size: 3em;
+      margin-bottom: 1em;
+      text-shadow: 0 0 15px red;
     }
 
     p {
-      font-size: 1.3rem;
+      font-size: 1.3em;
       max-width: 600px;
+      margin: 0 auto 2em auto;
+      text-shadow: 0 0 10px black;
     }
 
     .ritual-button {
-      margin-top: 2rem;
-      padding: 1rem 2.5rem;
-      font-size: 1.2rem;
+      padding: 15px 30px;
       background: darkred;
       border: none;
       border-radius: 8px;
       color: white;
+      font-size: 1.2em;
       cursor: pointer;
-      transition: 0.3s;
+      text-shadow: 0 0 5px black;
+      box-shadow: 0 0 10px crimson;
+      transition: 0.3s ease;
     }
 
     .ritual-button:hover {
       background: crimson;
+      box-shadow: 0 0 20px red;
+    }
+
+    .smoke {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background: url('https://i.gifer.com/7VE.gif') repeat;
+      opacity: 0.2;
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    .sigil {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 200px;
+      height: 200px;
+      transform: translate(-50%, -50%) rotate(0deg);
+      animation: rotate 60s linear infinite;
+      z-index: 0;
+    }
+
+    @keyframes rotate {
+      from { transform: translate(-50%, -50%) rotate(0deg); }
+      to { transform: translate(-50%, -50%) rotate(360deg); }
     }
   </style>
 </head>
 <body>
-  <div class="overlay">
-    <h1>Ritual de Kael'Tharon</h1>
-    <p>
-      Você está diante de um ritual simbólico de poder e prosperidade. Ao avançar, receberá um nome oculto — sua chave simbólica para o ciclo de sorte, foco e transformação.
-    </p>
-    <button class="ritual-button" onclick="location.href='https://tally.so/r/mVqKWE'">
-      Iniciar Ritual
-    </button>
-  </div>
-
   <audio autoplay loop>
-    <source src="https://files.catbox.moe/y6bnqh.mp3" type="audio/mpeg" />
+    <source src="https://cdn.pixabay.com/download/audio/2022/11/03/audio_44d98a1aab.mp3?filename=dark-ambient-117109.mp3" type="audio/mpeg">
   </audio>
+
+  <div class="smoke"></div>
+  <img class="sigil" src="https://i.ibb.co/FhXG6dM/sigil-circle-white.png" alt="Sigilo Rotativo">
+
+  <div class="container">
+    <h1>Ritual de Kael'Tharon</h1>
+    <p>Aquele que ascende do fogo e reclama o trono oculto do ouro.<br> Ao seguir este caminho, você se tornará parte do ciclo do poder, sorte e dinheiro.</p>
+    <a href="https://tally.so/r/mVqKWE">
+      <button class="ritual-button">Iniciar Ritual</button>
+    </a>
+  </div>
 </body>
 </html>
