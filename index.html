@@ -1,57 +1,72 @@
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ritual de Kael'Tharon</title>
-  
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap');
+
     body {
       margin: 0;
       padding: 0;
-      background: black url('https://i.ibb.co/D94ntGp/dark-ritual-background.gif') no-repeat center center fixed;
+      background: url('https://i.imgur.com/mFZAVvZ.jpeg') no-repeat center center fixed;
       background-size: cover;
-      color: white;
-      font-family: 'Cinzel', serif;
+      font-family: 'UnifrakturCook', cursive;
+      color: #f1f1f1;
       text-align: center;
     }
-    h1 {
-      font-size: 3em;
-      margin-top: 15vh;
+
+    .overlay {
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 4rem 2rem;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
     }
+
+    h1 {
+      font-size: 3.5rem;
+      margin-bottom: 1rem;
+    }
+
     p {
-      font-size: 1.2em;
-      margin: 20px auto;
-      width: 90%;
+      font-size: 1.3rem;
       max-width: 600px;
     }
+
     .ritual-button {
-      background-color: #bb0000;
+      margin-top: 2rem;
+      padding: 1rem 2.5rem;
+      font-size: 1.2rem;
+      background: darkred;
       border: none;
+      border-radius: 8px;
       color: white;
-      padding: 15px 30px;
-      font-size: 1.2em;
       cursor: pointer;
-      text-decoration: none;
-      border-radius: 10px;
-      box-shadow: 0 0 20px red;
-      transition: background 0.3s ease;
+      transition: 0.3s;
     }
+
     .ritual-button:hover {
-      background-color: #ff0000;
-    }
-    audio {
-      display: none;
+      background: crimson;
     }
   </style>
 </head>
 <body>
+  <div class="overlay">
+    <h1>Ritual de Kael'Tharon</h1>
+    <p>
+      Você está diante de um ritual simbólico de poder e prosperidade. Ao avançar, receberá um nome oculto — sua chave simbólica para o ciclo de sorte, foco e transformação.
+    </p>
+    <button class="ritual-button" onclick="location.href='https://tally.so/r/mVqKWE'">
+      Iniciar Ritual
+    </button>
+  </div>
+
   <audio autoplay loop>
-    <source src="https://cdn.pixabay.com/audio/2023/03/28/audio_3a7ff2fc94.mp3" type="audio/mpeg">
+    <source src="https://files.catbox.moe/y6bnqh.mp3" type="audio/mpeg" />
   </audio>
-  <h1>Ritual de Kael'Tharon</h1>
-  <p>Aquele que ascende do fogo e reclama o trono oculto do ouro. Ao seguir este caminho, você se tornará parte do ciclo do poder, sorte e dinheiro.</p>
-  <a href="https://tally.so/r/mVqKWE" class="ritual-button" target="_blank">Iniciar Ritual</a>
 </body>
 </html>
